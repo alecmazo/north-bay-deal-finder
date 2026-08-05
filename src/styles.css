@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-background: #0a0b0d;
+  --color-foreground: #f2f3f5;
+  --color-card: #12141a;
+  --color-card-foreground: #f2f3f5;
+  --color-popover: #16181f;
+  --color-popover-foreground: #f2f3f5;
+  --color-primary: #e8eaef;
+  --color-primary-foreground: #0a0b0d;
+  --color-secondary: #1c1f28;
+  --color-secondary-foreground: #e8eaef;
+  --color-muted: #1a1d25;
+  --color-muted-foreground: #9aa0ad;
+  --color-accent: #222632;
+  --color-accent-foreground: #e8eaef;
+  --color-destructive: #c45c5c;
+  --color-destructive-foreground: #fef2f2;
+  --color-border: #2a2e3a;
+  --color-input: #2a2e3a;
+  --color-ring: #8b93a7;
+  --color-success: #3d9b6e;
+  --color-success-foreground: #ecfdf5;
+  --color-warning: #c9a227;
+  --color-warning-foreground: #1a1400;
+  --color-deal: #5b8def;
+  --color-deal-foreground: #0a0b0d;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01" on, "cv11" on;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
