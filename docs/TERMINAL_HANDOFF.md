@@ -93,3 +93,13 @@ npm run build            # Vercel/Nitro production (needs care with DATABASE_URL
 ## Product intent (Alec)
 
 Local real estate finder for **underpriced North Bay homes** (price drops, foreclosures, short sales, arbitrage), with **renovation options**, **material costs linked to stores**, and **ARV / value-max steps**.
+
+## GitHub Pages one-time enable
+
+If https://alecmazo.github.io/north-bay-deal-finder/ 404s:
+
+1. Open https://github.com/alecmazo/north-bay-deal-finder/settings/pages  
+2. **Source:** Deploy from a branch  
+3. **Branch:** `gh-pages` / `/ (root)` → Save  
+
+CI rebuilds `gh-pages` on every push to `main`.
